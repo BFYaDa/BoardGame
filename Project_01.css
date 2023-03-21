@@ -25,9 +25,15 @@ header{
     max-height: 400px;
     margin: auto auto;
 
+}
+
+.slide_game{
+    max-width: 100px;
+    max-height: 100px;
+
 }   
 
-.img_rsponsive {
+.img_responsive {
         width: 100%;
         height: auto;
         max-width: 800px;
