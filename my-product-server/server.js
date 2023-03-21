@@ -34,6 +34,40 @@ app.use(express.static(path.resolve(__dirname, 'build')));
 
 app.use('/images', express.static('images'));
 
+// app.post("/api/product/upload/:productId", checkAuth, (req, res) => {
+// // });
+
+// var productId = req.params.productId;
+// var fileName;
+// var storage = multer.diskStorage({
+//     destination: (req, flie, cp) => {
+//         cp(null, "images");
+//     },
+//     filename: (req, file, cp) => {
+//         fileName = productId + "-" + file.originalname;
+//         cp(null, fileName);
+//     }
+// });
+
+
+// var upload = multer({ storage: storage}).single('file');
+// upload(req, res, async (err) => {
+//     if (err) {
+//         res.json({
+//             result: false,
+//             message: err.message
+//         });
+//     } else {
+//         var result = Product.updateImage(pool, productId, fileName);
+
+//         res.json({
+//             result: true,
+//             data: fileName
+//         });
+//     }
+// });
+
+// });
 app.post("/login", (req, res) => {
 
     const username = req.body.username;

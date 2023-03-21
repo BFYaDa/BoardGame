@@ -52,7 +52,7 @@ export default function ProductDetail() {
             setImageUrl(data.image_url);
         }
 
-        if (params.productId != "add") {
+        if (params.productId !== "add") {
             fetchData([params.productId]);
         }
     }, [params.productId]);
@@ -156,7 +156,7 @@ export default function ProductDetail() {
         if (form.checkValidity() === false) {
             event.stopPropagation();
         } else {
-            if (params.productId == "add") {
+            if (params.productId === "add") {
                 doCreateProduct();
             } else {
                 doUpdateProduct();
@@ -169,7 +169,7 @@ export default function ProductDetail() {
     return (
         <>
             {
-                (params.productId != "add") ?
+                (params.productId !== "add") ?
                     getImageComponent()
                     : <></>
             }
